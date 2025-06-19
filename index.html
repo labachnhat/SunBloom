@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SunBloom – Tsubomi Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌞 SunBloom</h1>
+
+    <div id="setup">
+      <p>What personal goal would you like to blossom?</p>
+      <input type="text" id="goalName" placeholder="e.g. Master 100 N3 kanji" />
+
+      <p>Now break it into 4 personalized steps:</p>
+      <input type="text" class="step-input" placeholder="Step 1" />
+      <input type="text" class="step-input" placeholder="Step 2" />
+      <input type="text" class="step-input" placeholder="Step 3" />
+      <input type="text" class="step-input" placeholder="Step 4" />
+
+      <button onclick="startTracking()">Start Tracking</button>
+    </div>
+
+    <div id="tracker" style="display:none;">
+      <h2 id="goalDisplay"></h2>
+      <div id="flowerWrapper">
+  <div id="flowerIcon">🌱</div>
+</div>
+
+      <p id="stepLabel"></p>
+      <button onclick="completeStep()">I’ve completed this step!</button>
+
+      <div class="legend">
+        <h3>🌸 Progress Icons</h3>
+        <ul>
+          <li>🌱 – Just planted (0%)</li>
+          <li>🌿 – Growing roots (25%)</li>
+          <li>🌼 – Budding (50%)</li>
+          <li>🌸 – Nearly there (75%)</li>
+          <li>🌺 – Full bloom (100%)</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/index.umd.min.js"></script>
+
+  </div>
+</body>
+</html>
